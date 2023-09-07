@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.footer {
+  background-color: #353535;
+}
+
+/*# sourceMappingURL=home.css.map */
