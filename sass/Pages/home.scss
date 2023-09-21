@@ -7,4 +7,23 @@
 
 .footer{ 
     background-color: $grey;
+    color: $white;
 }
+
+.header  { 
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.header-logo  { 
+   width: 50%;
+ }
+
+a { 
+   all: unset;
+}
+
+ul { 
+    all: unset;
+ }

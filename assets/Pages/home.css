@@ -11,6 +11,25 @@ html, body {
 
 .footer {
   background-color: #353535;
+  color: #F3F3F3;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header-logo {
+  width: 50%;
+}
+
+a {
+  all: unset;
+}
+
+ul {
+  all: unset;
 }
 
 /*# sourceMappingURL=home.css.map */
