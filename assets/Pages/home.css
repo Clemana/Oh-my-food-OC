@@ -32,4 +32,12 @@ ul {
   all: unset;
 }
 
+.location {
+  display: flex;
+  justify-content: center;
+  background-color: #EAEAEA;
+  padding: 20px;
+  font-size: 16px;
+}
+
 /*# sourceMappingURL=home.css.map */
