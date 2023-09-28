@@ -38,7 +38,7 @@ body {
 
 .header-logo  { 
    width: 50%;
- }
+}
 
 a { 
    all: unset;
@@ -46,9 +46,9 @@ a {
 
 ul { 
     all: unset;
- }
+}
 
- .location  { 
+.location  { 
     display: flex;
     justify-content: center;
     background-color: $greytwo;
@@ -60,7 +60,7 @@ ul {
     .location-text {
         font-weight: 700;
     }
-  }
+}
 
   .card-image {
     width: 100%;
