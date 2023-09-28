@@ -1,4 +1,18 @@
+@import "../Components/header";
+@import "../Components/footer";
+@import "../Components/main_button";
+@import "../Components/restaurant_card";
+@import "../Utils/variables";
+@import "../Utils/normalize";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
+a { 
+    all: unset;
+}
+ 
+ul { 
+     all: unset;
+}
 .header-logo  { 
     width: 50%;
 }
@@ -7,4 +21,25 @@
     object-fit: cover;
     width: 100%;
 
+}
+
+
+.footer{ 
+    background-color: $grey;
+    color: $white;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-title {
+    font-family: shrikhand, cursive;
+}
+
+.footer-1 {
+ display: flex;
+ align-items: center;
+ margin: 10px 5px;
 }
