@@ -115,6 +115,42 @@ flex-direction: column;
     flex-direction: column;
     row-gap: 10px;
 }
+
 .restaurants-text {
 
+}
+
+.operation {
+    padding: 15px;
+}
+
+.operation-cards{
+    display: flex;
+    flex-direction: column;
+}
+
+.operation-1 {
+    background: $whitetwo;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px;
+    gap: 5px;
+}
+
+.numbers {
+    background: $purple;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.operation-text {
+    margin-left: 20px;
 }

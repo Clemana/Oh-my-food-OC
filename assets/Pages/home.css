@@ -119,4 +119,39 @@ ul {
   row-gap: 10px;
 }
 
+.operation {
+  padding: 15px;
+}
+
+.operation-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.operation-1 {
+  background: #F6F6F6;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 10px;
+  gap: 5px;
+}
+
+.numbers {
+  background: #9356DC;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.operation-text {
+  margin-left: 20px;
+}
+
 /*# sourceMappingURL=home.css.map */
