@@ -36,6 +36,7 @@ body {
     padding: 20px;
 }
 
+
 .header-logo  { 
    width: 50%;
 }
@@ -64,8 +65,9 @@ ul {
 
   .card-image {
     width: 100%;
-    height: 100px;
+    height: 190px;
     object-fit: cover;
+    border-radius: 20px 20px 0 0;
 }
 
 .exploration {
@@ -91,6 +93,8 @@ background-color: $whitetwo;
     border: none;
     padding: 20px;
     margin-bottom: 30px;
+    margin-left: 90px;
+    width: 50%;
 }
 
 .restaurants{
@@ -99,15 +103,17 @@ background-color: $whitetwo;
 
 .restaurants-title {
     margin-left: 10px;
+    padding: 20px;
 }
 
 .card{
-background-color: $white;
+background: white;
 border-radius: 20px;
 padding: 5px;
-width: 100%;
 display: flex;
 flex-direction: column;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
+margin: 10px;
 }
 
 .cards{
@@ -116,8 +122,17 @@ flex-direction: column;
     row-gap: 10px;
 }
 
-.restaurants-text {
+.restaurants-text .fa-regular {
+   font-size: 26px;
+   display: flex;
+   position: relative;
+   padding-right: 20px;
+}
 
+.restaurants-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .operation {
@@ -149,8 +164,34 @@ flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-right: 15px;
+    margin-left: -20px;
 }
 
 .operation-text {
     margin-left: 20px;
+}
+
+.tag {
+    background: $green;
+    color: #1b9779;
+    position: absolute;
+    border-radius: 5px;
+    right: 30px;
+    padding: 5px;
+}
+
+.footer-1 .fa-solid {
+    margin-right: 10px;
+}
+
+.restaurants-h3 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.restaurants-p {
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 17px;
 }
