@@ -103,6 +103,7 @@ body {
 }
 
 .menu-p {
+  font-size: 15px;
   font-weight: 200;
   margin: 0;
 }
@@ -117,6 +118,9 @@ body {
   display: flex;
   align-items: flex-end;
   font-weight: 600;
+  position: absolute;
+  right: 0;
+  padding-right: 30px;
 }
 
 .main-button {
@@ -158,6 +162,13 @@ body {
   display: flex;
   justify-content: center;
   padding-right: 10px;
+  align-items: center;
+}
+
+.test-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
