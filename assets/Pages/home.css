@@ -212,6 +212,7 @@ ul {
 .restaurants-text .fa-regular:hover::before {
   color: #9356DC;
   cursor: pointer;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=home.css.map */
