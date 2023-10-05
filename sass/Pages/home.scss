@@ -201,3 +201,11 @@ margin: 10px;
     font-size: 17px;
 }
 
+.restaurants-text .fa-regular::before {
+    transition: 1s all ease;
+}
+
+.restaurants-text .fa-regular:hover::before {
+    color: $purple;
+    cursor: pointer;
+}
