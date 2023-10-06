@@ -206,13 +206,69 @@ ul {
 }
 
 .restaurants-text .fa-regular::before {
-  transition: 1s all ease;
+  transition: 1s ease;
 }
 
 .restaurants-text .fa-regular:hover::before {
   color: #9356DC;
   cursor: pointer;
   font-weight: bold;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #99E2D0;
+  border-bottom: 16px solid #89C8FA;
+  border-left: 16px solid #EAEAEA;
+  margin: 50px;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes stopspin {
+  100% {
+    opacity: 0;
+    scale: 0;
+    z-index: -1;
+    -webkit-transform: translate3d(0, 0, -300px);
+  }
+}
+.section-loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(234, 234, 234, 0.9647058824);
+  animation: stopspin 0.01s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
 }
 
 /*# sourceMappingURL=home.css.map */
