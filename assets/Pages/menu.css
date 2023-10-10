@@ -132,7 +132,6 @@ body {
   display: flex;
   border-radius: 30px;
   margin-top: 20px;
-  margin-left: 60px;
   width: 50%;
 }
 
@@ -171,6 +170,11 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.main-button-1 {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=menu.css.map */

@@ -270,7 +270,7 @@ ul {
 }
 
 @media screen and (min-width: 700px) {
-  .exploration-title1 {
+  .operation-title1 {
     display: flex;
     justify-content: center;
   }
