@@ -71,8 +71,6 @@ ul {
 }
 
 .exploration {
-display: flex;
-flex-direction: column;
 text-align: center;
 background-color: $whitetwo;
 }
@@ -80,6 +78,7 @@ background-color: $whitetwo;
 .exploration-title {
     font-size: 24px;
     padding: 20px;
+    margin: 0;
 }
 
 .exploration-subtitle{
@@ -93,7 +92,6 @@ background-color: $whitetwo;
     border: none;
     padding: 20px;
     margin-bottom: 30px;
-    margin-left: 90px;
     width: 50%;
    cursor: pointer;
    opacity: 1;
@@ -217,7 +215,7 @@ margin: 10px;
   border-top: 16px solid $purple;
   border-right: 16px solid $green;
   border-bottom: 16px solid $blue;
-  border-left: 16px solid $greytwo;
+  border-left: 16px solid $white;
   margin: 50px;
   width: 120px;
   height: 120px;
@@ -262,5 +260,22 @@ margin: 10px;
     animation-duration: 0.5s;
 }
 
+@media screen and (min-width: 700px) {
+ .exploration-title1 {
+    display: flex;
+    justify-content: center;
+ }
 
+ .operation-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+
+ .restaurants-title {
+    display: flex;
+    justify-content: center;
+ }
+ 
+}
 
