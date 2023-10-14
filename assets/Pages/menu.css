@@ -81,6 +81,9 @@ body {
   border-radius: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   animation: movecards 2s;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Ajoutez une transition pour le déplacement de la carte */
 }
 
 .menu-list:hover {
@@ -127,11 +130,11 @@ body {
   position: absolute;
   right: 0;
   padding-right: 30px;
+  transition: transform 0.3s ease; /* Ajoutez une transition pour le déplacement du prix */
 }
 
 .menu-check {
-  transform: translateX(70px);
-  position: relative;
+  position: absolute;
   right: 0;
   top: 0;
   display: flex;
@@ -139,6 +142,16 @@ body {
   align-items: center;
   background-color: #99e2d0;
   padding: 0 20px;
+  right: -30px; /* Initiallement hors de la carte */
+  top: 50%; /* Aligné au milieu verticalement */
+  transform: translateY(-50%);
+  opacity: 0; /* Initiallement invisible */
+  transition: right 0.3s ease, opacity 0.3s ease; /* Animation de transition */
+  height: 100%;
+}
+
+.menu-list:hover .menu-price {
+  transform: translateX(-100%); /* Déplacez le prix vers la gauche */
 }
 
 .menu-check-icon {
@@ -213,6 +226,20 @@ body {
     opacity: 100;
     transform: translateY(-45px);
   }
+}
+@keyframes showIcon {
+  0% {
+    right: -30px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+/* Ajoutez l'animation des keyframes lors du survol */
+.menu-list:hover .menu-check {
+  animation: showIcon 3s ease; /* Utilisez les keyframes pour l'animation */
 }
 
 /*# sourceMappingURL=menu.css.map */
