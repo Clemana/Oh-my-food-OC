@@ -286,11 +286,11 @@ ul {
 }
 
 /* Lors du survol, le cœur intérieur devient violet */
-.restaurants-text:hover .heart-icon .heart2 {
+.heart-icon:hover .heart2 {
   display: inline;
 }
 
-.restaurants-text:hover .heart-icon .heart1 {
+.heart-icon:hover .heart1 {
   display: none;
 }
 
