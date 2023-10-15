@@ -199,15 +199,6 @@ margin: 10px;
     font-size: 17px;
 }
 
-.restaurants-text .fa-regular::before {
-    transition: 1s ease;
-}
-
-.restaurants-text .fa-regular:hover::before {
-    color: $purple;
-    cursor: pointer;
-    font-weight: bold;
-}
 
 .loader {
     border: 16px solid #f3f3f3;
@@ -282,6 +273,39 @@ margin: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
  }
- 
 }
 
+/* Au départ, le cœur est vide (gris) */
+.heart-icon .heart2 {
+    display: none;
+    color: #8a2be2; /* Couleur violette du cœur rempli */
+  }
+  
+  /* Lors du survol, le cœur intérieur devient violet */
+  .restaurants-text:hover .heart-icon .heart2 {
+    display: inline;
+  }
+  
+  .restaurants-text:hover .heart-icon .heart1 {
+    display: none;
+  }
+  
+  .heart-icon {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+  }
+  
+  .heart2 {
+    padding-right: 20px;
+  }
+
+  /* Lors du clic, le cœur devient violet */
+#heart-icon.clicked .heart1 {
+    display: none;
+  }
+  
+  #heart-icon.clicked .heart2 {
+    display: inline;
+    color: #8a2be2; /* Couleur violette du cœur rempli */
+  }
