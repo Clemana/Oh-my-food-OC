@@ -304,14 +304,17 @@ ul {
   padding-right: 20px;
 }
 
-/* Lors du clic, le cœur devient violet */
-#heart-icon.clicked .heart1 {
+.toggle-heart {
   display: none;
 }
 
-#heart-icon.clicked .heart2 {
+.toggle-heart:checked + label .heart2 {
   display: inline;
   color: #8a2be2; /* Couleur violette du cœur rempli */
+}
+
+.toggle-heart:checked + label .heart1 {
+  display: none;
 }
 
 /*# sourceMappingURL=home.css.map */
