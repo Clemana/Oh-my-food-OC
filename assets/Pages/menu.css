@@ -50,50 +50,47 @@ body {
   height: 200px;
 }
 
-.container-menu {
-  display: flex;
-  justify-content: center;
-}
-.container-menu .menu {
+.menu {
   border-radius: 60px 60px 0 0;
   background: #F6F6F6;
   padding: 20px;
   margin-top: -20px;
   position: relative;
 }
-.container-menu .restaurant-title {
+
+.restaurant-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container-menu .restaurant-title .menu-title {
+.restaurant-title .menu-title {
   font-family: "Shrikhand", cursive;
 }
-.container-menu .restaurant-title .heart-icon .heart2 {
+.restaurant-title .heart-icon .heart2 {
   display: none;
   color: transparent;
   transition: color 0.3s ease-in-out;
 }
-.container-menu .restaurant-title .heart-icon:hover .heart2 {
+.restaurant-title .heart-icon:hover .heart2 {
   display: inline;
   color: #8a2be2;
 }
-.container-menu .restaurant-title .heart-icon:hover .heart1 {
+.restaurant-title .heart-icon:hover .heart1 {
   display: none;
 }
-.container-menu .restaurant-title .heart-icon {
+.restaurant-title .heart-icon {
   position: relative;
   display: inline-block;
   font-size: 24px;
 }
-.container-menu .restaurant-title .toggle-heart {
+.restaurant-title .toggle-heart {
   display: none;
 }
-.container-menu .restaurant-title .toggle-heart:checked + label .heart2 {
+.restaurant-title .toggle-heart:checked + label .heart2 {
   display: inline;
   color: #8a2be2;
 }
-.container-menu .restaurant-title .toggle-heart:checked + label .heart1 {
+.restaurant-title .toggle-heart:checked + label .heart1 {
   display: none;
 }
 
@@ -289,6 +286,10 @@ body {
   }
   .footer-title {
     margin-right: 30px;
+  }
+  .container-menu {
+    display: flex;
+    justify-content: center;
   }
 }
 .plat {

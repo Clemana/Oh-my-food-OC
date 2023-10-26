@@ -100,8 +100,7 @@ ul {
   padding: 20px;
 }
 .restaurants .cards {
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
   row-gap: 10px;
 }
 .restaurants .cards .card {
@@ -151,43 +150,47 @@ ul {
   font-weight: 300;
   font-size: 17px;
 }
-.restaurants-text .heart-icon .heart2 {
+
+.heart-icon .heart2 {
   display: none;
   color: #8a2be2;
 }
-.restaurants-text .heart-icon:hover .heart2 {
+
+.heart-icon:hover .heart2 {
   display: inline;
 }
-.restaurants-text .heart-icon:hover .heart1 {
+
+.heart-icon:hover .heart1 {
   display: none;
 }
-.restaurants-text .heart-icon {
+
+.heart-icon {
   position: relative;
   display: inline-block;
   font-size: 24px;
 }
-.restaurants-text .heart2 {
+
+.heart2 {
   padding-right: 20px;
 }
-.restaurants-text .toggle-heart {
+
+.toggle-heart {
   display: none;
 }
-.restaurants-text .toggle-heart:checked + label .heart2 {
+
+.toggle-heart:checked + label .heart2 {
   display: inline;
   color: #8a2be2;
 }
-.restaurants-text .toggle-heart:checked + label .heart1 {
+
+.toggle-heart:checked + label .heart1 {
   display: none;
 }
 
 .operation {
   padding: 15px;
 }
-.operation .operation-cards {
-  display: flex;
-  flex-direction: column;
-}
-.operation .operation-cards .operation-1 {
+.operation .operation-1 {
   background: #F6F6F6;
   border-radius: 50px;
   display: flex;
@@ -196,7 +199,7 @@ ul {
   margin: 10px;
   gap: 5px;
 }
-.operation .operation-cards .operation-1 .numbers {
+.operation .operation-1 .numbers {
   background: #9356DC;
   color: white;
   width: 30px;
@@ -208,7 +211,7 @@ ul {
   margin-right: 15px;
   margin-left: -20px;
 }
-.operation .operation-cards .operation-1 .operation-text {
+.operation .operation-1 .operation-text {
   margin-left: 20px;
 }
 
@@ -302,12 +305,12 @@ ul {
   .footer-title {
     margin-right: 30px;
   }
-  .button {
-    width: 20%;
-  }
   .numbers {
     margin-left: -35px;
     aspect-ratio: 1;
+  }
+  .exploration .button {
+    width: 25%;
   }
 }
 

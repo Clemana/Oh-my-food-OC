@@ -45,9 +45,7 @@ body {
     height: 200px;
 }
 
-.container-menu{
-    display: flex;
-    justify-content: center;
+
     .menu {
         border-radius: 60px 60px 0 0;
         background: $whitetwo;
@@ -98,7 +96,7 @@ body {
         
     }
     
-}
+
 
 .container {
     display: flex;
@@ -297,7 +295,12 @@ body {
     .footer-title{
         margin-right: 30px;
     }
-  }
+
+    .container-menu {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 .plat {
     display: flex;
