@@ -132,7 +132,7 @@ body {
     animation: movecards 2s ease;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease; /* Ajoutez une transition pour le déplacement de la carte */
+    transition: transform 0.3s ease; 
     transform: translateY(0);
     .menu-h3 {
         font-size: 18px;
@@ -152,8 +152,8 @@ body {
             font-size: 15px;
             font-weight: 200;
             margin: 0;
-            white-space: nowrap; /* Empêche le texte de passer à la ligne */
-            overflow: hidden; /* Masque tout texte dépassant de la zone définie */
+            white-space: nowrap; 
+            overflow: hidden; 
             text-overflow: ellipsis;
             width: 70%;
         }
@@ -163,7 +163,7 @@ body {
             font-weight:600 ;
             margin: 0;
             padding-right: 11px;
-            transition: transform 0.3s ease; /* Ajoutez une transition pour le déplacement du prix */
+            transition: transform 0.3s ease; 
         }
     }
     .menu-check {
@@ -175,11 +175,11 @@ body {
         align-items: center;
         background-color: #99e2d0;
         padding: 0 20px;
-        right: -30px; /* Initiallement hors de la carte */
-        top: 50%; /* Aligné au milieu verticalement */
+        right: -30px; 
+        top: 50%; 
         transform: translateY(-50%);
-        opacity: 0; /* Initiallement invisible */
-        transition: right 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Animation de transition */
+        opacity: 0; 
+        transition: right 0.3s ease, opacity 0.3s ease, transform 0.3s ease; 
         height: 100%;
         .menu-check-icon {
             font-size: 10px;
@@ -195,8 +195,9 @@ body {
 }
 
 .menu-list:hover .menu-check {
-    right: 0; /* Ajustez la position finale lors du survol */
-    opacity: 1; /* Ajustez l'opacité finale lors du survol */
+    right: 0; 
+    opacity: 1; 
+    animation: showIcon 0.3s ease;
 }
 
 .menu-list:hover {
@@ -205,16 +206,12 @@ body {
 
 .menu-list:hover .menu-h3,
 .menu-list:hover .menu-p {
-    width: 50%; /* Réduisez la largeur pour le rétrécissement */
-    text-overflow: ellipsis; /* Rétrécissez le texte avec des points de suspension lors du survol */
+    width: 50%; 
+    text-overflow: ellipsis; 
 }
 
 .menu-list:hover .menu-price {
-    transform: translateX(-100%); /* Déplacez le prix vers la gauche */
-}
-
-.menu-list:hover .menu-check {
-    animation: showIcon 0.3s ease; 
+    transform: translateX(-100%); 
 }
 
 .main-button-1 {
@@ -318,31 +315,31 @@ body {
 
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Commencez par une opacité de 0 */
-        transform: translateY(15px); /* Animation d'arrivée */
+        opacity: 0; 
+        transform: translateY(15px); 
     }
     100% {
-        opacity: 1; /* Opacité finale de 1 (complètement visible) */
-        transform: translateY(0); /* Pas de transformation finale */
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
 
 .menu-list:nth-child(1) {
-    animation: fadeIn 1s ease-in-out 0s 1 forwards; /* Appliquez l'animation à la première carte */
+    animation: fadeIn 1s ease-in-out 0s 1 forwards; 
 }
 
 .menu-list:nth-child(2) {
-    animation: fadeIn 1s ease-in-out 1s 1 forwards; /* Appliquez l'animation à la deuxième carte avec un délai de 1s */
+    animation: fadeIn 1s ease-in-out 1s 1 forwards; 
 }
 
 .menu-list:nth-child(3) {
-    animation: fadeIn 1s ease-in-out 2s 1 forwards; /* Appliquez l'animation à la troisième carte avec un délai de 2s */
+    animation: fadeIn 1s ease-in-out 2s 1 forwards; 
 }
 
 .menu-list:nth-child(4) {
-    animation: fadeIn 1s ease-in-out 3s 1 forwards; /* Appliquez l'animation à la troisième carte avec un délai de 2s */
+    animation: fadeIn 1s ease-in-out 3s 1 forwards; 
 }
 
 .menu-list {
-    opacity: 0; /* Initialement, définissez l'opacité à 0 pour les rendre invisibles au départ */
+    opacity: 0; 
 }

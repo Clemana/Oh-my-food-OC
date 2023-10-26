@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html, body {
   height: 100%;
@@ -38,8 +37,7 @@ body {
   justify-content: center;
   padding: 20px;
 }
-
-.header-logo {
+.header .header-logo {
   width: 50%;
 }
 
@@ -65,29 +63,19 @@ ul {
   font-weight: 700;
 }
 
-.card-image {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
-}
-
 .exploration {
   text-align: center;
   background-color: #F6F6F6;
 }
-
-.exploration-title {
+.exploration .exploration-title {
   font-size: 24px;
   padding: 20px;
   margin: 0;
 }
-
-.exploration-subtitle {
+.exploration .exploration-subtitle {
   font-weight: 200;
 }
-
-.button {
+.exploration .button {
   color: white;
   background: linear-gradient(#ff79da 0%, #9356DC 100%);
   border-radius: 30px;
@@ -107,13 +95,16 @@ ul {
 .restaurants {
   background: #F6F6F6;
 }
-
-.restaurants-title {
+.restaurants .restaurants-title {
   margin-left: 10px;
   padding: 20px;
 }
-
-.card {
+.restaurants .cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.restaurants .cards .card {
   position: relative;
   background: white;
   border-radius: 20px;
@@ -122,11 +113,20 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
   margin: 10px;
 }
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
+.restaurants .cards .card .card-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants .cards .card .tag {
+  background: #99E2D0;
+  color: #1b9779;
+  position: absolute;
+  border-radius: 5px;
+  top: 20px;
+  right: 30px;
+  padding: 5px;
 }
 
 .restaurants-text .fa-regular {
@@ -141,17 +141,53 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+.restaurants-text .restaurants-h3 {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+.restaurants-text .restaurants-p {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 17px;
+}
+.restaurants-text .heart-icon .heart2 {
+  display: none;
+  color: #8a2be2;
+}
+.restaurants-text .heart-icon:hover .heart2 {
+  display: inline;
+}
+.restaurants-text .heart-icon:hover .heart1 {
+  display: none;
+}
+.restaurants-text .heart-icon {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+}
+.restaurants-text .heart2 {
+  padding-right: 20px;
+}
+.restaurants-text .toggle-heart {
+  display: none;
+}
+.restaurants-text .toggle-heart:checked + label .heart2 {
+  display: inline;
+  color: #8a2be2;
+}
+.restaurants-text .toggle-heart:checked + label .heart1 {
+  display: none;
+}
 
 .operation {
   padding: 15px;
 }
-
-.operation-cards {
+.operation .operation-cards {
   display: flex;
   flex-direction: column;
 }
-
-.operation-1 {
+.operation .operation-cards .operation-1 {
   background: #F6F6F6;
   border-radius: 50px;
   display: flex;
@@ -160,8 +196,7 @@ ul {
   margin: 10px;
   gap: 5px;
 }
-
-.numbers {
+.operation .operation-cards .operation-1 .numbers {
   background: #9356DC;
   color: white;
   width: 30px;
@@ -173,38 +208,32 @@ ul {
   margin-right: 15px;
   margin-left: -20px;
 }
-
-.operation-text {
+.operation .operation-cards .operation-1 .operation-text {
   margin-left: 20px;
-}
-
-.tag {
-  background: #99E2D0;
-  color: #1b9779;
-  position: absolute;
-  border-radius: 5px;
-  top: 20px;
-  right: 30px;
-  padding: 5px;
 }
 
 .footer-1 .fa-solid {
   margin-right: 10px;
 }
 
-.restaurants-h3 {
-  margin-left: 10px;
-  margin-bottom: 0px;
+.section-loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(234, 234, 234, 0.9647058824);
+  animation: stopspin 0.01s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
 }
-
-.restaurants-p {
-  margin-left: 10px;
-  margin-top: 5px;
-  font-weight: 300;
-  font-size: 17px;
-}
-
-.loader {
+.section-loader .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #9356DC;
@@ -217,7 +246,6 @@ ul {
   animation: spin 2s linear infinite;
   position: fixed;
 }
-
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -241,23 +269,6 @@ ul {
     z-index: -1;
     -webkit-transform: translate3d(0, 0, -300px);
   }
-}
-.section-loader {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(234, 234, 234, 0.9647058824);
-  animation: stopspin 0.01s;
-  animation-delay: 3s;
-  animation-fill-mode: both;
-  animation-duration: 0.5s;
 }
 
 @media screen and (min-width: 700px) {
@@ -296,43 +307,8 @@ ul {
   }
   .numbers {
     margin-left: -35px;
+    aspect-ratio: 1;
   }
-}
-/* Au départ, le cœur est vide (gris) */
-.heart-icon .heart2 {
-  display: none;
-  color: #8a2be2;
-}
-
-.heart-icon:hover .heart2 {
-  display: inline;
-}
-
-.heart-icon:hover .heart1 {
-  display: none;
-}
-
-.heart-icon {
-  position: relative;
-  display: inline-block;
-  font-size: 24px;
-}
-
-.heart2 {
-  padding-right: 20px;
-}
-
-.toggle-heart {
-  display: none;
-}
-
-.toggle-heart:checked + label .heart2 {
-  display: inline;
-  color: #8a2be2;
-}
-
-.toggle-heart:checked + label .heart1 {
-  display: none;
 }
 
 /*# sourceMappingURL=home.css.map */
