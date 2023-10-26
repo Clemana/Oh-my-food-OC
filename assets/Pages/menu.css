@@ -28,14 +28,20 @@ body {
   font-family: "Roboto";
 }
 
-.header-logo {
-  width: 100%;
-}
-
 .header {
   display: flex;
   justify-content: center;
   padding: 20px;
+}
+.header .header-arrow {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1440px;
+  margin: auto;
+}
+.header .header-logo {
+  width: 100%;
 }
 
 .images {
@@ -44,34 +50,73 @@ body {
   height: 200px;
 }
 
-.footer {
-  background-color: #353535;
-  color: #F3F3F3;
-  padding: 15px;
+.container-menu {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
-
-.footer-title {
-  font-family: shrikhand, cursive;
-}
-
-.footer-1 {
-  display: flex;
-  align-items: center;
-  margin: 10px 5px;
-}
-
-.menu {
+.container-menu .menu {
   border-radius: 60px 60px 0 0;
   background: #F6F6F6;
   padding: 20px;
   margin-top: -20px;
   position: relative;
 }
-
-.menu-title {
+.container-menu .restaurant-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-menu .restaurant-title .menu-title {
   font-family: "Shrikhand", cursive;
+}
+.container-menu .restaurant-title .heart-icon .heart2 {
+  display: none;
+  color: transparent;
+  transition: color 0.3s ease-in-out;
+}
+.container-menu .restaurant-title .heart-icon:hover .heart2 {
+  display: inline;
+  color: #8a2be2;
+}
+.container-menu .restaurant-title .heart-icon:hover .heart1 {
+  display: none;
+}
+.container-menu .restaurant-title .heart-icon {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+}
+.container-menu .restaurant-title .toggle-heart {
+  display: none;
+}
+.container-menu .restaurant-title .toggle-heart:checked + label .heart2 {
+  display: inline;
+  color: #8a2be2;
+}
+.container-menu .restaurant-title .toggle-heart:checked + label .heart1 {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .title {
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0;
+}
+.container .menu-title-underline {
+  width: 48px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin: 0px 0 1.2rem 0;
+}
+.container .entrée {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 20px;
 }
 
 .menu-list {
@@ -87,33 +132,8 @@ body {
   transition: transform 0.3s ease; /* Ajoutez une transition pour le déplacement de la carte */
   transform: translateY(0);
 }
-
-.menu-list:hover {
-  cursor: pointer;
-}
-
-.menu-info {
-  padding: 9px;
-  display: flex;
-  overflow: hidden;
-}
-
-.menu-header {
-  font-weight: 300;
+.menu-list .menu-h3 {
   font-size: 18px;
-  margin: 0;
-}
-
-.menu-text {
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap; /* Empêche le texte de passer à la ligne */
-  overflow: hidden; /* Masque tout texte dépassant de la zone définie */
-  text-overflow: ellipsis; /* Affiche trois petits points (...) lorsque le texte est tronqué */
-}
-
-.menu-h3 {
-  font-size: 15px;
   font-weight: 500;
   margin: 0;
   text-overflow: ellipsis;
@@ -121,8 +141,13 @@ body {
   white-space: nowrap;
   width: 80%;
 }
-
-.menu-p {
+.menu-list .menu-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-list .menu-text .menu-p {
   font-size: 15px;
   font-weight: 200;
   margin: 0;
@@ -131,14 +156,7 @@ body {
   text-overflow: ellipsis;
   width: 70%;
 }
-
-.menu-information {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.menu-price {
+.menu-list .menu-text .menu-price {
   display: flex;
   align-items: flex-end;
   font-weight: 600;
@@ -146,14 +164,7 @@ body {
   padding-right: 11px;
   transition: transform 0.3s ease; /* Ajoutez une transition pour le déplacement du prix */
 }
-
-.menu-list:hover .menu-h3,
-.menu-list:hover .menu-p {
-  width: 50%; /* Réduisez la largeur pour le rétrécissement */
-  text-overflow: ellipsis; /* Rétrécissez le texte avec des points de suspension lors du survol */
-}
-
-.menu-check {
+.menu-list .menu-check {
   position: absolute;
   right: -30px;
   top: 50%;
@@ -169,17 +180,7 @@ body {
   transition: right 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Animation de transition */
   height: 100%;
 }
-
-.menu-list:hover .menu-price {
-  transform: translateX(-100%); /* Déplacez le prix vers la gauche */
-}
-
-.menu-list:hover .menu-check {
-  right: 0; /* Position d'arrêt de l'animation lors du survol */
-  opacity: 1; /* Rendre l'élément visible lors du survol */
-}
-
-.menu-check-icon {
+.menu-list .menu-check .menu-check-icon {
   font-size: 10px;
   display: flex;
   justify-content: center;
@@ -190,7 +191,34 @@ body {
   border-radius: 50%;
 }
 
-.main-button {
+.menu-list:hover .menu-check {
+  right: 0; /* Ajustez la position finale lors du survol */
+  opacity: 1; /* Ajustez l'opacité finale lors du survol */
+}
+
+.menu-list:hover {
+  cursor: pointer;
+}
+
+.menu-list:hover .menu-h3,
+.menu-list:hover .menu-p {
+  width: 50%; /* Réduisez la largeur pour le rétrécissement */
+  text-overflow: ellipsis; /* Rétrécissez le texte avec des points de suspension lors du survol */
+}
+
+.menu-list:hover .menu-price {
+  transform: translateX(-100%); /* Déplacez le prix vers la gauche */
+}
+
+.menu-list:hover .menu-check {
+  animation: showIcon 0.3s ease;
+}
+
+.main-button-1 {
+  display: flex;
+  justify-content: center;
+}
+.main-button-1 .main-button {
   color: white;
   padding: 15px;
   justify-content: center;
@@ -208,46 +236,24 @@ body {
   opacity: 0.8;
 }
 
-.entrée {
+.footer {
+  background-color: #353535;
+  color: #F3F3F3;
+  padding: 15px;
   display: flex;
   flex-direction: column;
+}
+.footer .footer-title {
+  font-family: shrikhand, cursive;
+}
+.footer .footer-title .footer-1 {
+  display: flex;
+  align-items: center;
+  margin: 10px 5px;
 }
 
 .footer-1 .fa-solid {
   margin-right: 10px;
-}
-
-.menu-title-underline {
-  width: 48px;
-  height: 3px;
-  background-color: #99E2D0;
-  margin: 0px 0 1.2rem 0;
-}
-
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.test-1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-button-1 {
-  display: flex;
-  justify-content: center;
-}
-
-.header-1 {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  max-width: 1440px;
-  margin: auto;
 }
 
 @keyframes movecards {
@@ -270,55 +276,9 @@ body {
     opacity: 1;
   }
 }
-.menu-list:hover .menu-check {
-  animation: showIcon 0.3s ease;
-}
-
-.heart-icon .heart2 {
-  display: none;
-  color: transparent;
-  transition: color 0.3s ease-in-out;
-}
-
-.heart-icon:hover .heart2 {
-  display: inline;
-  color: #8a2be2;
-}
-
-.heart-icon:hover .heart1 {
-  display: none;
-}
-
-.heart-icon {
-  position: relative;
-  display: inline-block;
-  font-size: 24px;
-}
-
-.toggle-heart {
-  display: none;
-}
-
-.toggle-heart:checked + label .heart2 {
-  display: inline;
-  color: #8a2be2;
-}
-
-.toggle-heart:checked + label .heart1 {
-  display: none;
-}
-
-.test-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-  margin-bottom: 20px;
-}
-
 @media screen and (min-width: 700px) {
   .menu {
     width: 60%;
-    margin-left: 250px;
   }
   .footer {
     display: flex;
@@ -327,6 +287,55 @@ body {
   .footer-1 {
     margin-right: 60px;
   }
+  .header-arrow .fa-solid {
+    font-size: xx-large;
+  }
+  .footer-title {
+    margin-right: 30px;
+  }
+}
+.plat {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+.dessert {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Commencez par une opacité de 0 */
+    transform: translateY(15px); /* Animation d'arrivée */
+  }
+  100% {
+    opacity: 1; /* Opacité finale de 1 (complètement visible) */
+    transform: translateY(0); /* Pas de transformation finale */
+  }
+}
+.menu-list:nth-child(1) {
+  animation: fadeIn 1s ease-in-out 0s 1 forwards; /* Appliquez l'animation à la première carte */
+}
+
+.menu-list:nth-child(2) {
+  animation: fadeIn 1s ease-in-out 1s 1 forwards; /* Appliquez l'animation à la deuxième carte avec un délai de 1s */
+}
+
+.menu-list:nth-child(3) {
+  animation: fadeIn 1s ease-in-out 2s 1 forwards; /* Appliquez l'animation à la troisième carte avec un délai de 2s */
+}
+
+.menu-list:nth-child(4) {
+  animation: fadeIn 1s ease-in-out 3s 1 forwards; /* Appliquez l'animation à la troisième carte avec un délai de 2s */
+}
+
+.menu-list {
+  opacity: 0; /* Initialement, définissez l'opacité à 0 pour les rendre invisibles au départ */
 }
 
 /*# sourceMappingURL=menu.css.map */
