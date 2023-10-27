@@ -66,32 +66,39 @@ body {
 .restaurant-title .menu-title {
   font-family: "Shrikhand", cursive;
 }
-.restaurant-title .heart-icon .heart2 {
-  display: none;
-  color: transparent;
-  transition: color 0.3s ease-in-out;
-}
-.restaurant-title .heart-icon:hover .heart2 {
-  display: inline;
-  color: #8a2be2;
-}
-.restaurant-title .heart-icon:hover .heart1 {
-  display: none;
-}
-.restaurant-title .heart-icon {
+
+.heart {
+  font-size: 1.6em;
+  padding-right: 1rem;
+  height: 18px;
+  width: 16px;
+  display: flex;
   position: relative;
-  display: inline-block;
-  font-size: 24px;
+  justify-content: center;
 }
-.restaurant-title .toggle-heart {
-  display: none;
+.heart > .far + .fas {
+  position: absolute;
 }
-.restaurant-title .toggle-heart:checked + label .heart2 {
-  display: inline;
-  color: #8a2be2;
+.heart > .fas {
+  opacity: 0;
+  color: #F6F6F6;
+  transition: 0.2s ease-in-out;
 }
-.restaurant-title .toggle-heart:checked + label .heart1 {
-  display: none;
+.heart:hover .far {
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+.heart:hover > .fas {
+  transform: scale(1.2);
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+  background-image: linear-gradient(to top right, #9356DC, #F6F6F6);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container {

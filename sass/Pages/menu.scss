@@ -60,42 +60,46 @@ body {
         .menu-title {
             font-family: "Shrikhand", cursive;
         }
-        .heart-icon .heart2 {
-            display: none;
-            color: transparent;
-            transition: color 0.3s ease-in-out;
-          }
-          
-           .heart-icon:hover .heart2 {
-            display: inline;
-            color: #8a2be2;
-          }
-          
-           .heart-icon:hover .heart1 {
-            display: none;
-          }
-          
-          .heart-icon {
-            position: relative;
-            display: inline-block;
-            font-size: 24px;
-          }
-
-          .toggle-heart {
-            display: none;
-          }
-          
-          .toggle-heart:checked + label .heart2 {
-            display: inline;
-            color: #8a2be2; 
-           }
-        
-          .toggle-heart:checked + label .heart1 {
-            display: none;
-          }
-        
     }
     
+    .heart {
+        font-size: 1.6em;
+        padding-right: 1rem;
+        height: 18px;
+        width: 16px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+    
+        > .far + .fas {
+          position: absolute;
+        }
+        > .fas {
+          opacity: 0;
+          color: $whitetwo;
+          transition: 0.2s ease-in-out;
+        }
+        &:hover .far {
+          opacity: 0;
+          transition-duration: 0.2s;
+        }
+        &:hover > .fas {
+          transform: scale(1.2);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+          opacity: 1;
+          transition: 0.2s ease-in-out;
+          background-image: linear-gradient(
+            to top right,
+            $purple,
+            $whitetwo
+          );
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
 
 
 .container {
