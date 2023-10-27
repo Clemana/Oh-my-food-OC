@@ -89,15 +89,16 @@ body {
   transition-duration: 0.2s;
 }
 .heart:hover > .fas {
-  transform: scale(1.2);
+  transform: scale(1);
   display: flex;
   position: absolute;
   cursor: pointer;
   opacity: 1;
   transition: 0.2s ease-in-out;
-  background-image: linear-gradient(to top right, #9356DC, #F6F6F6);
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -moz-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

@@ -10,7 +10,6 @@
     background-color: $grey;
     color: $white;
     padding: 15px;
-    
     display: flex;
     flex-direction: column;
 
@@ -171,7 +170,7 @@ ul {
       transition-duration: 0.2s;
     }
     &:hover > .fas {
-      transform: scale(1.2);
+      transform: scale(1);
       display: flex;
       position: absolute;
       cursor: pointer;
@@ -179,11 +178,12 @@ ul {
       transition: 0.2s ease-in-out;
       background-image: linear-gradient(
         to top right,
-        $purple,
-        $whitetwo
+        $purpletwo,
+        $purple
       );
       -webkit-background-clip: text;
       -moz-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
@@ -311,7 +311,7 @@ ul {
 }
  .numbers {
     margin-left: -35px;
-    aspect-ratio: 1;
+    aspect-ratio: 1/1;
  }
  
  .exploration .button {
