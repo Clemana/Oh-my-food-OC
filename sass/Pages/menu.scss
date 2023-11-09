@@ -141,7 +141,6 @@ body {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        width: 80%;
     }
     .menu-text {
         display: flex;
@@ -155,7 +154,6 @@ body {
             white-space: nowrap; 
             overflow: hidden; 
             text-overflow: ellipsis;
-            width: 70%;
         }
         .menu-price {
             display: flex;
@@ -206,8 +204,8 @@ body {
 
 .menu-list:hover .menu-h3,
 .menu-list:hover .menu-p {
-    width: 50%; 
-    text-overflow: ellipsis; 
+    width: 70%; 
+   
 }
 
 .menu-list:hover .menu-price {
@@ -285,10 +283,7 @@ body {
         width: 60%;
     }
 
-    .menu-list:hover .menu-h3,
-    .menu-list:hover .menu-p {
-       width: 100%; 
-    }
+
    
     .footer {
         display: flex;
