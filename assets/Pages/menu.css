@@ -233,6 +233,9 @@ body {
   opacity: 1;
   transition: 0.3s;
 }
+.main-button-1 .main-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
 .main-button:hover {
   opacity: 0.8;
@@ -281,6 +284,10 @@ body {
 @media screen and (min-width: 700px) {
   .menu {
     width: 60%;
+  }
+  .menu-list:hover .menu-h3,
+  .menu-list:hover .menu-p {
+    width: 100%;
   }
   .footer {
     display: flex;

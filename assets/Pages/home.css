@@ -87,6 +87,9 @@ ul {
   opacity: 1;
   transition: 0.3s;
 }
+.exploration .button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
 .button:hover {
   opacity: 0.8;
@@ -248,12 +251,12 @@ ul {
   animation: spin 2s linear infinite;
   position: fixed;
 }
-@-webkit-keyframes spin {
+@keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes spin {
@@ -267,9 +270,8 @@ ul {
 @keyframes stopspin {
   100% {
     opacity: 0;
-    scale: 0;
     z-index: -1;
-    -webkit-transform: translate3d(0, 0, -300px);
+    transform: translate3d(0, 0, -300px);
   }
 }
 

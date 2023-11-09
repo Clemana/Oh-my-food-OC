@@ -94,9 +94,9 @@ body {
             $purple
           );
           -webkit-background-clip: text;
-          -moz-background-clip: text;
+            -moz-background-clip: text;
           background-clip: text;
-          -webkit-text-fill-color: transparent;
+         -webkit-text-fill-color: transparent; 
         }
       }
 
@@ -230,6 +230,9 @@ body {
         cursor: pointer;
         opacity: 1;
         transition: 0.3s;
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
     }
 }
 
@@ -282,6 +285,11 @@ body {
     .menu {
         width: 60%;
     }
+
+    .menu-list:hover .menu-h3,
+    .menu-list:hover .menu-p {
+       width: 100%; 
+    }
    
     .footer {
         display: flex;
@@ -305,6 +313,8 @@ body {
         display: flex;
         justify-content: center;
     }
+
+    
 }
 
 .plat {
