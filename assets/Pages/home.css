@@ -184,9 +184,8 @@ ul {
   transition: 0.2s ease-in-out;
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .operation {

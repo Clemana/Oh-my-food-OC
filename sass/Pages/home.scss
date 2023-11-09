@@ -181,10 +181,9 @@ ul {
         $purpletwo,
         $purple
       );
-      -webkit-background-clip: text;
-            -moz-background-clip: text;
-          background-clip: text;
-         -webkit-text-fill-color: transparent; 
+       -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; 
     }
   }
 
